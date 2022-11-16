@@ -1,0 +1,51 @@
+<main class="main">
+  <div class="show_inner">
+
+    <div class="tweet__show">
+      <p class="tweet__hedding">
+        <%= @tweet.artist %>
+      </p>
+      <%= link_to "by #{@tweet.user.nickname}", "#", class: :tweet__user %>
+      <%# <% if current_user == @tweet.user%>
+        <%# <div class="tweet__manage"> %>
+          <%# <%= link_to "編集する", edit_prototype_path(@prototype), class: :tweet__btn %>
+          <%# <%= link_to "削除する", prototype_path(@prototype), method: :delete, class: :tweet__btn %>
+        <%# </div> %>
+      <%# <% end %>  
+      <div class="tweet__image">
+        <%= image_tag @tweet.image.variant(resize: '300x300') %>
+      </div>
+      <div class="tweet__body">
+        <div class="tweet__detail">
+          <p class="tweet__title">商品の詳細</p>
+          <p class="detail__text">
+            <%= @tweet.text %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tweet__comments">
+      <% if user_signed_in? %>
+        <%= form_with model: [@tweet, @comment], local: true do |f|%>
+          <div class="comment_field">
+            <%= f.label :comment, "コメント"  %><br />
+            <%= f.text_area :comment, id:"comment_content", :size=>"60", placeholder:"1回のコメントは、最大50文字以内で入力をお願いします" %>
+          </div>
+          <div class="actions">
+            <%= f.submit "送信する", class: :commentform__btn %>
+          </div>
+        <% end %>
+      <% end %>
+      <ul class="comments_lists">
+        <% @comments.each do |comment| %>
+          <li class="comments_list">
+            <%= comment.comment %>
+            <%= link_to "（#{comment.user.nickname}）", "#", class: :comment_user %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+</main>

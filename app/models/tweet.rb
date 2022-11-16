@@ -5,6 +5,6 @@ class Tweet < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   validates :artist, presence: true
-  validates :text, {lengh: {maximum: 140}}
+  validates :text, {length: {maximum: 140}}
   validates :image, presence: true
 end

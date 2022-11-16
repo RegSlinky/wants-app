@@ -1,7 +1,8 @@
 <div class="tweet">
   <%# <%= link_to "by #{tweet.user.nickname}", "#" class: :tweet__user %> 
   <div class="tweet__body">
-    <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweets_path(tweet), class: :tweet__artist%>
+    <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
+    <%= link_to image_tag(tweet.image.variant(resize: '160x160'), class: :tweet__img ), tweet_path(tweet) %>
     <p class="tweet__text">
       <%= tweet.text %>
     </p>
@@ -12,8 +13,7 @@
     <%# </div> %>
   <%# <% end %> 
 
-    <%= link_to image_tag(tweet.image.variant(resize: '160x160'), class: :tweet__img ), tweets_path(tweet) %>
-    <%= form_with model: @tweet, local: true do |f|%>
+    <%= form_with model: @tweet, local: true do |f|%> 
       <div class="buy_action">
         <%= f.submit "Buy!", class: :form__btn__left  %>
       </div>

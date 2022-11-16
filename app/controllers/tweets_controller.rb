@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :move_to_index, only: [:show]
+
   def index
     @tweets = Tweet.all
   end
@@ -16,9 +18,19 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
+  end
+
   private
 
   def tweet_params
     params.require(:tweet).permit(:artist, :text, :image).merge(user_id: current_user.id)
   end
+
+  def move_to_index
+    @tweet = Tweet.find(params[:id])
+  end
+
 end
