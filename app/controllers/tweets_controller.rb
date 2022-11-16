@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :move_to_index, only: [:show]
 
   def index
@@ -31,6 +32,7 @@ class TweetsController < ApplicationController
 
   def move_to_index
     @tweet = Tweet.find(params[:id])
+
   end
 
 end

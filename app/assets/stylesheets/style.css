@@ -135,10 +135,10 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: rgb(29, 26, 26);
+  color: rgb(250, 245, 245);
   text-decoration: none;
   user-select: none;
-  background: #adae92;
+  background: #5c747d;
   border: 1px #edf0f2 solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(160, 10, 132, 0.12);
@@ -190,6 +190,24 @@ a {
   min-height: calc(100vh - 190px);
 }
 
+.tweet {
+  border: 2px solid #968f8f;
+  border-radius: 10px;
+  width: calc((100% - 50px) / 4);
+  margin-top: 10px;
+  margin-left: 20px;  
+  background-color: #f5eded;
+}
+
+.tweet__user {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgb(175, 38, 38);
+  text-align: center;
+  text-decoration: underline;
+}
+
 .tweet__logo {
   position: relative;
   top: 30px;
@@ -198,16 +216,6 @@ a {
   height: 30px;
   border-radius: 4px;
 }
-.tweet {
-  border: 2px solid #968f8f;
-  border-radius: 10px;
-  width: calc((100% - 50px) / 4);
-  margin-top: 20px;
-  margin-left: 20px;  
-  display: flex;
-  background-color: #f5eded;
-}
-
 
 .tweet__artist {
   color:rgb(44, 20, 34);
@@ -229,13 +237,6 @@ a {
   margin-bottom: 10px;
   padding-left: 85px;
 }
-.tweet__user {
-  display: block;
-  font-size: 12px;
-  color: rgb(126, 18, 18);
-  text-align: right;
-  text-decoration: underline;
-}
 
 /* 詳細ページ */
 .show_inner {
@@ -245,20 +246,20 @@ a {
 
 .tweet__show{
   width: 800px;
+  margin-top: 17px;
 }
 .tweet__hedding{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
-.tweet__user{
+.show__user{
   display: block;
-  font-size: 16px;
-  color: #999;
+  font-size: 20px;
+  color: rgb(175, 38, 38);
   text-align: center;
   text-decoration: underline;
-  margin-top: 10px 0px 10px 0px;
 }
 .tweet__image{
   width: 40%;
@@ -277,9 +278,9 @@ a {
 }
 
 .detail__text {
-padding: 0px 50px 0px 50px;
-text-align: center;
-margin-top: 10px;
+  padding: 0px 50px 0px 50px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .tweet__manage{
@@ -314,23 +315,54 @@ margin-top: 10px;
   text-align: center;
 }
 
+.rules {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:smaller;
+  color: rgb(235, 15, 15);
+}
+
+.rules_comment {
+  font-size:larger;
+}
+
 input[type="comment"] {
   width: 300px;
   height: 40px;
 }
-
-.commentform__btn {
+.commentnav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: rgb(29, 26, 26);
+  color: #050505;
   text-decoration: none;
-  background: #636987;
-  border: 1px #edf0f2 solid;
+  user-select: none;
+  border: 1px #050505 solid;
   border-radius: 3px;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(160, 10, 132, 0.12);
-  transition: 0.2s ease;
-  margin: 30px 0px 0px 253px;
+  transition: 0.4s ease;
+  margin: 10px 0px 0px 245px;
+}
+.commentnav__btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+
+.sellnav__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #050505;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #050505 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  position:absolute;
+  top: 100vh;
+  right: 260px;
+}
+.sellnav__btn:hover{
+  color: #fff;
+  background: #e33048;
 }
 
 .comments_lists{
@@ -339,7 +371,7 @@ input[type="comment"] {
 
 .comments_list{
   list-style-type: square;
-  padding-bottom: 5px;
+  padding: 10px 0px 5px 20px;
 }
 
 .comment_user{

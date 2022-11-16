@@ -1,6 +1,8 @@
 <div class="tweet">
-  <%# <%= link_to "by #{tweet.user.nickname}", "#" class: :tweet__user %> 
-  <div class="tweet__body">
+
+  <%= link_to "#{tweet.user.nickname}さんが探している商品", "#", class: :tweet__user %> 
+  
+  <div class="tweet__body"> 
     <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
     <%= link_to image_tag(tweet.image.variant(resize: '160x160'), class: :tweet__img ), tweet_path(tweet) %>
     <p class="tweet__text">
