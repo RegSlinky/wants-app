@@ -3,16 +3,17 @@
       <%= image_tag "music.logo.jpeg", class: "music-image" %>
       <div class="music_inner">
         <% if user_signed_in? %>
-          <div class="greeting">
-          こんにちは、<%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %> 探している商品を投稿してみましょう！
+          <div class="message">
+          こんにちは、<%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %> が探している商品を投稿してみましょう！
           </div>
         <% end %>
-        <div class="card__wrapper">
-          <%# <%= render partial: 'tweet', collection: @tweets %> 
-        </div>
       </div>
   </div>
+
   <div class="second_middle">
+    <div class="tweet__wrapper">
+      <%= render partial: 'tweet', collection: @tweets %>
+    </div>
   </div>
 </main>
 

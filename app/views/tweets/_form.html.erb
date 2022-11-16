@@ -1,0 +1,20 @@
+<%= form_with model: tweet, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "アーティスト名" %><br />
+    <%= f.text_field :artist %>
+  </div>
+
+  <div class="field">
+    <%= f.label :catch_copy, "商品の詳細（最大140文字以内）" %><br />
+    <%= f.text_area :text, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "商品の画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
