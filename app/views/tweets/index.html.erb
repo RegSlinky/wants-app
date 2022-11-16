@@ -1,14 +1,19 @@
-<main class="main">
-  <div class="inner">
-    <%# if user_signed_in? %>
-      <div class="greeting">
-        こんにちは、
-        <%# <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%> 
+<main class="music_main">
+  <div class="middle">
+      <%= image_tag "music.logo.jpeg", class: "music-image" %>
+      <div class="music_inner">
+        <%# if user_signed_in? %>
+          <div class="greeting">
+            探している商品を投稿してみましょう！
+            <%# <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%> 
+          </div>
+        <%# end %>
+        <div class="card__wrapper">
+          <%# <%= render partial: 'tweet', collection: @tweets %> 
+        </div>
       </div>
-    <%# end %>
-    <div class="card__wrapper">
-      <%# <%= render partial: 'tweet', collection: @tweets %> 
-    </div>
+  </div>
+  <div class="second_middle">
   </div>
 </main>
 

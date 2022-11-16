@@ -38,22 +38,24 @@ a {
 
 .header {
   background-color: #5ac8ce;
-  margin-bottom: 48px;
-  padding: 20px 0;
+  padding: 10px 10px;
+}
 
+.logo_title {
+  font-size: 40px;
+  height: 30px;
+  width: 260px;
+  margin: 0 20px;
+  display: flex;
 }
-.inner {
-  width: 1024px;
-  margin: 0 auto;
-}
+
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
 }
-.logo {
-  width: 250px;
-}
+
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -80,6 +82,38 @@ a {
 }
 .nav__logout:hover{
   opacity: 0.5;
+}
+
+.middle {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+
+.music-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 70%;
+}
+
+.music_inner {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: calc(100% - 55px);
+  width: 100%;
+  padding: 0 60px;
+}
+
+.greeting {
+  font-size: 30px;
+  color: rgb(239, 243, 245);
+}
+
+.second_middle {
+  width: 100%;
+  height: 500px;
 }
 
 /* フォーム周り */
