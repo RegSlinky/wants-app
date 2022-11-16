@@ -2,12 +2,11 @@
   <div class="middle">
       <%= image_tag "music.logo.jpeg", class: "music-image" %>
       <div class="music_inner">
-        <%# if user_signed_in? %>
+        <% if user_signed_in? %>
           <div class="greeting">
-            探している商品を投稿してみましょう！
-            <%# <%= link_to "#{current_user.name}さん", user_path(current_user), class: :greeting__link%> 
+          こんにちは、<%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %> 探している商品を投稿してみましょう！
           </div>
-        <%# end %>
+        <% end %>
         <div class="card__wrapper">
           <%# <%= render partial: 'tweet', collection: @tweets %> 
         </div>

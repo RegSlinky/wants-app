@@ -12,22 +12,22 @@
 
   <body>
     <header class="header">
-      <p class="logo_title">Wants</p>
+      <%= link_to "Wants", "/", class: :logo_title %>
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
           </div>
-          <%# <% if user_signed_in? %> 
+          <% if user_signed_in? %> 
             <div class="nav__right">
-              <%= link_to "ログアウト", "#", class: :nav__logout %>
-              <%= link_to "New Tweet", "#", class: :nav__btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              <%= link_to "New Tweet", "#", class: :nav__btn %> 
             </div>
-          <%# <% else %> 
-            <%# <div class="nav__right">
-              <%= link_to "ログイン", "#", class: :nav__btn %>
-              <%# <%= link_to "新規登録", "#", class: :nav__btn %> 
-            <%# </div> %> 
-          <%# <% end %>
+           <% else %>
+            <div class="nav__right">
+              <%= link_to "ログイン", "/users/sign_in", class: :nav__btn %>
+              <%= link_to "新規登録", "/users/sign_up", class: :nav__btn %>
+            </div> 
+          <% end %>
         </div>
       </div>
     </header>

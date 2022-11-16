@@ -108,7 +108,7 @@ a {
 
 .greeting {
   font-size: 30px;
-  color: rgb(239, 243, 245);
+  color: rgb(3, 3, 3);
 }
 
 .second_middle {
@@ -119,6 +119,7 @@ a {
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
+  margin-left: 33px;
 }
 
 .form__text {
