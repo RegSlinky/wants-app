@@ -15,11 +15,11 @@
     <%# </div> %>
   <%# <% end %> 
 
-    <%= form_with model: @tweet, local: true do |f|%> 
-      <div class="buy_action">
-        <%= f.submit "Buy!", class: :form__btn__left  %>
-      </div>
-    <% end %>
+    <div class="buy_action">
+      <% if tweet.item != nil %>
+        <%= link_to "Buy!", tweet_items_path(tweet.id), class: :form__btn__left %>
+      <% end %> 
+    </div>
   </div>
 </div>
 

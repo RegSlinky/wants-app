@@ -32,7 +32,6 @@ class TweetsController < ApplicationController
 
   def move_to_index
     @tweet = Tweet.find(params[:id])
-
   end
 
 end

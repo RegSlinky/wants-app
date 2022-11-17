@@ -14,13 +14,14 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+    @tweet = Tweet.find(params[:tweet_id])
+    @item = @tweet.item.id
   end
 
   private
 
   def item_params
-    params.require(:item).permit(:artist, :image, :title, :shipping_fee_status_id, :prefecture_id, :parter_nickname, :price).merge(user_id:current_user.id, tweet_id: params[:tweet_id])
+    params.require(:item).permit(:artist, :image, :title, :shipping_fee_status_id, :prefecture_id, :partner_nickname, :price).merge(user_id:current_user.id, tweet_id: params[:tweet_id])
   end
 
 end

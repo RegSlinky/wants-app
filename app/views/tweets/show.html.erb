@@ -37,7 +37,7 @@
           </div>
           <div class="comment_submit">
             <%= f.submit "コメント送信", class: :commentnav__btn %>
-            <%= link_to "商品を出品", "#", class: :sellnav__btn %>
+            <%= link_to "商品を出品", new_tweet_items_path(@tweet.id), class: :sellnav__btn %>
           </div>
         <% end %>
       <% end %>
