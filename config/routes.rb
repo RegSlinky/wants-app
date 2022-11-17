@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :tweets, only: [:index, :new, :create, :show] do
     resources :comments, only: :create
   end
+  resources :items, only: [:show, :new, :create]
 end
