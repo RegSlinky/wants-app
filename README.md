@@ -88,6 +88,7 @@ wants
 | prefecture_id          | integer    | null: false                    |
 | partner_nickname       | string     | null: false                    |
 | user                   | references | null: false, foreign_key: true |
+| tweet                  | references | null: false, foreign_key: true |
 
 ### Association
 

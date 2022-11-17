@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root to: "tweets#index"
   resources :tweets, only: [:index, :new, :create, :show] do
     resources :comments, only: :create
+      resources :items, only: [:show, :new, :create]
   end
-  resources :items, only: [:show, :new, :create]
 end
