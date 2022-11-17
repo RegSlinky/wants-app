@@ -1,5 +1,4 @@
 <div class="tweet">
-
   <%= link_to "#{tweet.user.nickname}さんが探している商品", "#", class: :tweet__user %> 
   
   <div class="tweet__body"> 
@@ -17,7 +16,7 @@
 
     <div class="buy_action">
       <% if tweet.item != nil %>
-        <%= link_to "Buy!", tweet_items_path(tweet.id), class: :form__btn__left %>
+        <%= link_to "Buy!", tweet_items_path(tweet.id), class: :form__btn__buy %>
       <% end %> 
     </div>
   </div>

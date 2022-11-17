@@ -1,14 +1,13 @@
 <main class="music_main">
-  <div class="middle">
-      <%= image_tag "musiclogo.jpeg", class: "music-image" %>
-      <div class="music_inner">
-        <% if user_signed_in? %>
-          <div class="message">
-          こんにちは、<%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %> が探している商品を投稿してみましょう！
-          </div>
-        <% end %>
-      </div>
-  </div>
+
+<%= render "head" %>
+
+  <div class='item-contents'>
+    <h2 class='title'>WANT LIST</h2>
+    <div class="subtitle" >
+      新着投稿一覧
+    </div>
+    <ul class='item-lists'>
 
   <div class="second_middle">
     <div class="tweet__wrapper">

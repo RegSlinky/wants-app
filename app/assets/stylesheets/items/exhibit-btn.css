@@ -1,18 +1,25 @@
 .purchase-btn {
   width: 120px;
-  background: #3ccace;
+  height:130px;
+  background: #fbfefe;
   text-align: center;
+  border: 2px #7ea6c1 solid;
   border-radius: 4%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
+  top: 140px;
+  right: 10px;
   padding: 15px;
+  margin-right: 300px;
+}
+
+.purchase-btn:hover{
+  color: #fff;
+  background: #87CEFA;
 }
 
 .purchase-btn-text {
-  color: #fff;
+  color: rgb(16, 15, 15);
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
   margin-bottom: 5px;
 }
