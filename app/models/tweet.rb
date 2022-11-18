@@ -4,7 +4,10 @@ class Tweet < ApplicationRecord
   has_one :item
   has_many :comments, dependent: :destroy
 
-  validates :artist, presence: true
-  validates :text, {length: {maximum: 140}}
+  with_options presence: true do
+    validates :artist, length: {maximum: 40}
+    validates :text, length: {maximum: 140}
+  end
+
   validates :image, presence: true
 end
