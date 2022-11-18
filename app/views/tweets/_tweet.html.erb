@@ -1,5 +1,5 @@
 <div class="tweet">
-  <%= link_to "#{tweet.user.nickname}さんが探している商品", "#", class: :tweet__user %> 
+  <%= link_to "#{tweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
   
   <div class="tweet__body"> 
     <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
