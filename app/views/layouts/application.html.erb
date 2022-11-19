@@ -5,8 +5,8 @@
     <title>Wants</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
@@ -17,17 +17,17 @@
         <div class="nav">
           <div class="nav__left">
           </div>
-          <% if user_signed_in? %> 
-            <div class="nav__right">
-              <%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-            </div>
-           <% else %>
-            <div class="nav__right">
-              <%= link_to "ログイン", "/users/sign_in", class: :nav__btn %>
-              <%= link_to "新規登録", "/users/sign_up", class: :nav__btn %>
-            </div> 
-          <% end %>
+            <% if user_signed_in? %> 
+              <div class="nav__right">
+                <%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              </div>
+            <% else %>
+              <div class="nav__right">
+                <%= link_to "ログイン", "/users/sign_in", class: :nav__btn %>
+                <%= link_to "新規登録", "/users/sign_up", class: :nav__btn %>
+              </div> 
+            <% end %>
         </div>
       </div>
     </header>

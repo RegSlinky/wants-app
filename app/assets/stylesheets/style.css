@@ -167,6 +167,20 @@ a {
   width: 100%; 
 }
 
+.form__btn__edit {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 1.5em;
+  text-align: center;
+  color: rgb(250, 245, 245);
+  background: #356ebe;
+  border: 1px #edf0f2 solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(160, 10, 132, 0.12);
+  transition: 0.2s ease;
+  width: 100%; 
+}
+
 /* メイン */
 .music_main {
   background-color: #6c4040;
@@ -321,6 +335,7 @@ a {
   padding: 1em;
   border: 8px solid #a60;
   box-shadow: 2px 2px 4px #999, 2px 2px 2px #020 inset;
+  border-radius: 8px;
 }
 
 .comment_field {
@@ -439,48 +454,4 @@ input[type="comment"] {
   text-align: center;
   color: #fff;
   font-size: 10px;
-}
-
-/* タブレット対応 */
-@media (max-width: 1024px) {
-  .inner {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .page-heading {
-    font-size: 24px;
-  }
-  .card {
-    width: 48%;
-    margin-bottom: 40px;
-  }
-  .prototype_image{
-    width: 60%;
-  }
-}
-
- /* スマホ表示 */
-@media (max-width: 599px) {
-  .logo {
-    width: 120px;
-  }
-  .page-heading {
-    font-size: 20px;
-  }
-  .card {
-    width: 100%;
-    margin-bottom: 60px;
-  }
-  .card__title {
-    font-size: 18px;
-  }
-  .card__summary {
-    font-size: 14px;
-  }
-  .prototype_image{
-    width: 100%;
-  }
-  .table{
-    width: 100%;
-  }
 }

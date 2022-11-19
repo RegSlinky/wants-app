@@ -37,22 +37,26 @@
           </div>
           <div class="comment_submit">
             <%= f.submit "コメント送信", class: :commentnav__btn %>
-            <%= link_to "商品を出品", new_tweet_items_path(@tweet.id), class: :sellnav__btn %>
+
+            <% unless @tweet.item != nil %>
+              <% if current_user.id != @tweet.user.id %>
+                <%= link_to "商品を出品", new_tweet_items_path(@tweet.id), class: :sellnav__btn %>
+              <% end %>
+            <% end %>
           </div>
         <% end %>
       <% end %>
       <ul class="comments_lists">
         <% @comments.reverse.each do |comment| %>
           <li class="comments_list">
-              <%= comment.created_at.strftime('%Y/%m/%d %H:%M')  %>
-              <%= link_to "     #{comment.user.nickname}さん", "#", class: :comment_user %>
+            <%= comment.created_at.strftime('%Y/%m/%d %H:%M')  %>
+            <%= link_to "     #{comment.user.nickname}さん", "#", class: :comment_user %>
               <div class="comment_com">
-               <%= comment.comment %>
+                <%= comment.comment %>
               </div>
           </li>
         <% end %>
       </ul>
     </div>
-
   </div>
 </main>
