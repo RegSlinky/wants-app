@@ -1,20 +1,21 @@
 <div class="middle">
-  <%= image_tag "record.jpeg", class: "music-image" %>
+  <%= image_tag "recordmain.jpeg", class: "music-image" %> 
     <div class="music_inner">
 
       <div class="message">
-        <%# <%= link_to "#{current_user.nickname}さん", "#", class: :greeting__link %> お探しの商品を投稿しましょう
+        お探しの商品を投稿しましょう
         <div class="second_message">
         音楽に特化した、投稿型のフリーマケットサイト<br>
-        コンサート会場限定品、プレミアム商品など<br>
-        探していた商品がきっと見つかる<br>
+        コンサート会場限定品、プレミアム商品など、探していた商品がきっと見つかる<br>
         </div>
       </div>
-    <% if user_signed_in? %>
-      <%= link_to(new_tweet_path, class: 'purchase-btn') do %>
-      <span class='purchase-btn-text'>投稿する</span>
-        <%= image_tag 'wantlist.jpeg' , size: '185x50' ,class: "purchase-btn-icon" %>
+      <% if user_signed_in? %>
+        <%= link_to "#", class: :form__btn__click do %>
+          <i class="fa-solid fa-hand-point-right"></i>
+        <% end %>
+        <%= link_to new_tweet_path, class: :form__btn__tweet do %>
+          <i class="fa-solid fa-feather-pointed"></i>&emsp;Tweet
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
 </div>

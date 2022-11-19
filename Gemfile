@@ -67,3 +67,4 @@ gem 'image_processing', '~> 1.2'
 gem 'active_hash'
 gem 'pry-rails'
 gem 'rails-i18n'
+gem "font-awesome-rails"

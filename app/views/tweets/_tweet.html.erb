@@ -1,10 +1,10 @@
 <div class="tweet">
-
-  <%= link_to "#{tweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
-  
   <div class="tweet__body"> 
-    <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
-    <%= link_to image_tag(tweet.image.variant(resize: '160x160'), class: :tweet__img ), tweet_path(tweet) %>
+    <%= link_to image_tag(tweet.image, class: :tweet__img ), tweet_path(tweet) %>
+    <%= link_to "#{tweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
+      <div class="tweettitle">
+        <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
+      </div>  
       <p class="tweet__text">
         <%= tweet.text %>
       </p>
@@ -18,9 +18,13 @@
     <div class="buy_action">
       <% unless tweet.item == nil %>
         <% if user_signed_in? && current_user.id == tweet.user.id %>
-          <%= link_to "Buy!", tweet_items_path(tweet.id), class: :form__btn__buy %>
+          <%= link_to tweet_items_path(tweet.id), class: :form__btn__buy do %>
+            <i class="fa-regular fa-handshake"></i>&emsp;Buy
+          <% end %>
         <% elsif %>
-          <%= link_to "Edit or Delete", tweet_items_path(tweet.id), class: :form__btn__edit %>
+          <%= link_to tweet_items_path(tweet.id), class: :form__btn__edit do %>
+            <i class="fa-solid fa-wrench"></i>&emsp;Edit
+          <% end %>
         <% end %>
       <% end %>
     </div>
