@@ -23,6 +23,13 @@
           </p>
         </div>
       </div>
+      <% unless @tweet.item != nil %>
+        <% if user_signed_in? && current_user.id == @tweet.user.id %>
+          <%= link_to tweet_path(@tweet.id), class: :form__btn__destroy, method: :delete do %>
+            <i class="fa-solid fa-trash"></i>&emsp;Delete
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
 
     <div class="tweet__comments">
@@ -42,7 +49,7 @@
             <% unless @tweet.item != nil %>
               <% if current_user.id != @tweet.user.id %>
               <%= link_to new_tweet_items_path(@tweet.id), class: :sellnav__btn do %>
-                <i class="fa-solid fa-cart-shopping"></i>&emsp;Sell
+                <i class="fa-regular fa-handshake"></i>&emsp;Sell
               <% end %>
 
               <% end %>

@@ -4,7 +4,7 @@
         <div class="balloonoya">
         <div class="box_comment", id="comment">
           <%= link_to "#", class: :form__btn__comment do %>
-            <i class="fa-regular fa-bell"></i>
+            <i class="fa-regular fa-comment"></i>
             <span class="balloon">
               <%= tweet.text %>
             </span>
@@ -26,7 +26,7 @@
       <% unless tweet.item == nil %>
         <% if user_signed_in? && current_user.id == tweet.user.id %>
           <%= link_to tweet_items_path(tweet.id), class: :form__btn__buy do %>
-            <i class="fa-regular fa-handshake"></i>&emsp;Buy
+            <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
           <% end %>
         <% elsif %>
           <%= link_to tweet_items_path(tweet.id), class: :form__btn__edit do %>

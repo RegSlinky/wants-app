@@ -4,7 +4,7 @@
     <%# unless @item.order != nil %>
       <% if user_signed_in? && current_user.id == @tweet.user.id %>
           <%= link_to "#", class: :form__btn__buyer do %>
-            <i class="fa-regular fa-handshake"></i>&emsp;Buy
+            <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
           <% end %>
       <% elsif %>
         <div class="edit-destroy">

@@ -24,6 +24,14 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
+  def destroy
+    tweet = Tweet.find(params[:id])
+    if current_user.id == tweet.user.id
+      tweet.destroy
+    end
+      redirect_to root_path
+  end
+
   private
 
   def tweet_params
