@@ -158,21 +158,55 @@
 }
 
 .sell-btn {
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
-  width: 100%;
-  height: 50px;
-  font-size: 14px;
-  margin-bottom: 4vh;
+  display: inline-block;
+  padding: 8px 20px 8px 25px;
+  font-size: 1.5em;
+  color: rgb(250, 245, 245);
+  background: #f10707;
+  border: 1px #edf0f2 solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(160, 10, 132, 0.12);
+  transition: 0.2s ease;
+  height: 60px;
+  width: 200px; 
+  transition: all 0.2s;
+  position: relative;
+  top: 20px;
+  left: 105px;
+}
+  
+.sell-btn:hover {
+  font-size: 1.6em;
+  opacity: 0.5;
+  background: black;
+  color: white;
+  border-radius: 10px;
 }
 
 .back-btn {
-  background: #aaa;
-  border: 1px solid #aaa;
-  color: #fff;
-  padding: 15px 35%;
-  text-decoration: none;
+  display: inline-block;
+  padding: 17px 20px 8px 25px;
+  font-size: 1.5em;
+  color: rgb(250, 245, 245);
+  background: #9b9696;
+  border: 1px #edf0f2 solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(160, 10, 132, 0.12);
+  transition: 0.2s ease;
+  height: 60px;
+  width: 200px; 
+  transition: all 0.2s;
+  position: relative;
+  top: 90px;
+  right: 100px;
+}
+  
+.back-btn:hover {
+  font-size: 1.6em;
+  opacity: 0.5;
+  background: black;
+  color: white;
+  border-radius: 10px;
 }
 
 .items-sell-footer {

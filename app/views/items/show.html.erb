@@ -3,11 +3,17 @@
 
     <%# unless @item.order != nil %>
       <% if user_signed_in? && current_user.id == @tweet.user.id %>
-          <%= link_to "購入画面に進む", "#" ,class:"item-buy-btn"%>
+          <%= link_to "#", class: :form__btn__buyer do %>
+            <i class="fa-regular fa-handshake"></i>&emsp;Buy
+          <% end %>
       <% elsif %>
         <div class="edit-destroy">
-          <%= link_to "商品の編集", edit_item_path(@item), method: :get, class: "item-red-btn" %>
-          <%= link_to "削除", item_path(@item), method: :delete, class:"item-destroy" %>
+          <%= link_to edit_item_path(@item), class: :form__btn__showedit, method: :get do %>
+            <i class="fa-solid fa-wrench"></i>&emsp;Edit
+          <% end %>
+          <%= link_to item_path(@item), class: :form__btn__delete, method: :delete do %>
+            <i class="fa-solid fa-trash"></i>&emsp;Delete
+          <% end %>
         </div>
       <% end %>
 
@@ -17,10 +23,7 @@
 
     <div class="item-price-box">
       <span class="item-price">
-        ￥<%= @tweet.item.price %>
-      </span>
-      <span class="item-postage">
-        <%= "配送料負担" %>
+        Preice&emsp;￥<%= @tweet.item.price %>
       </span>
     </div>
 

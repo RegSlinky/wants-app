@@ -1,19 +1,26 @@
 <div class="tweet">
   <div class="tweet__body"> 
     <%= link_to image_tag(tweet.image, class: :tweet__img ), tweet_path(tweet) %>
+        <div class="balloonoya">
+        <div class="box_comment", id="comment">
+          <%= link_to "#", class: :form__btn__comment do %>
+            <i class="fa-regular fa-bell"></i>
+            <span class="balloon">
+              <%= tweet.text %>
+            </span>
+            <% end %>
+        </div>
+      </div>
     <%= link_to "#{tweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
       <div class="tweettitle">
         <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
       </div>  
-      <p class="tweet__text">
-        <%= tweet.text %>
-      </p>
 
-  <%# <% if item.order != nil %>
-    <%# <div class='sold-out'> %>
-      <%# <span>Sold Out!!</span> %>
-    <%# </div> %>
-  <%# <% end %> 
+    <%# <% if item.order != nil %>
+      <%# <div class='sold-out'> %>
+        <%# <span>Sold Out!!</span> %>
+      <%# </div> %>
+    <%# <% end %> 
 
     <div class="buy_action">
       <% unless tweet.item == nil %>
