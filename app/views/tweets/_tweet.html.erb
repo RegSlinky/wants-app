@@ -23,7 +23,9 @@
     <%# <% end %> 
 
     <div class="buy_action">
-      <% unless tweet.item == nil %>
+
+    <%# <% if @items.order != nil %> 
+      <% if tweet.item != nil %>
         <% if user_signed_in? && current_user.id == tweet.user.id %>
           <%= link_to tweet_items_path(tweet.id), class: :form__btn__buy do %>
             <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
@@ -34,6 +36,7 @@
           <% end %>
         <% end %>
       <% end %>
+    <%# <% end %> 
     </div>
   </div>
 </div>

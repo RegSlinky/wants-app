@@ -8,7 +8,7 @@
 }
 
 .item-box {
-  background-color: #FFF;
+  background-color: #f8f8f8;
   width: 70vw;
   min-width: 1200px;
   padding: 10vh 15vw;
@@ -57,8 +57,8 @@
 
 .form__btn__showedit {
   display: inline-block;
-  padding: 11px 25px 8px 25px;
-  font-size: 1.5em;
+  padding: 13px 25px 8px 25px;
+  font-size: 1.2em;
   color: rgb(250, 245, 245);
   background: #356ebe;
   border: 1px #edf0f2 solid;
@@ -74,7 +74,7 @@
 }
 
 .form__btn__showedit:hover {
-  font-size: 1.6em;
+  font-size: 1.3em;
   opacity: 0.5;
   background: black;
   color: white;
@@ -87,8 +87,8 @@
 
 .form__btn__delete {
   display: inline-block;
-  padding: 11px 25px 8px 25px;
-  font-size: 1.5em;
+  padding: 12px 20px 8px 23px;
+  font-size: 1.2em;
   color: rgb(250, 245, 245);
   background: #8a8c90;
   border: 1px #edf0f2 solid;
@@ -104,7 +104,7 @@
 }
 
 .form__btn__delete:hover {
-  font-size: 1.6em;
+  font-size: 1.25em;
   opacity: 0.5;
   background: white;
   color: black;
@@ -139,8 +139,8 @@
 
 .form__btn__buyer {
   display: inline-block;
-  padding: 8px 20px 8px 25px;
-  font-size: 1.5em;
+  padding: 15px 22px 8px 30px;
+  font-size: 1.3em;
   color: rgb(250, 245, 245);
   background: #f10707;
   border: 1px #edf0f2 solid;
@@ -148,14 +148,14 @@
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(160, 10, 132, 0.12);
   transition: 0.2s ease;
   height: 60px;
-  width: 200px; 
+  width: 250px; 
   transition: all 0.2s;
   position: relative;
   top: 0px;
 }
 
 .form__btn__buyer:hover {
-  font-size: 1.6em;
+  font-size: 1.2em;
   opacity: 0.5;
   background: black;
   color: white;
@@ -175,6 +175,11 @@
   box-shadow: 2px 2px 4px #999, 2px 2px 2px #020 inset;
   border-radius: 8px;
   margin: 10px 0px 50px 0px;
+}
+
+.buy-btn {
+  position: relative;
+  right: 20px;
 }
 
 .item-explain-box {

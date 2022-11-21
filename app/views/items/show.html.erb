@@ -3,16 +3,16 @@
 
     <%# unless @item.order != nil %>
       <% if user_signed_in? && current_user.id == @tweet.user.id %>
-          <%= link_to "#", class: :form__btn__buyer do %>
-            <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
+          <%= link_to item_orders_path(@item), class: :form__btn__buyer do %>
+            <i class="fa-solid fa-cart-shopping"></i>&emsp; Buy Page!
           <% end %>
       <% elsif %>
         <div class="edit-destroy">
           <%= link_to edit_item_path(@item), class: :form__btn__showedit, method: :get do %>
-            <i class="fa-solid fa-wrench"></i>&emsp;Edit
+            <i class="fa-solid fa-wrench"></i>&emsp;Edit Page!
           <% end %>
           <%= link_to item_path(@item), class: :form__btn__delete, method: :delete do %>
-            <i class="fa-solid fa-trash"></i>&emsp;Delete
+            <i class="fa-solid fa-trash"></i>&emsp;Delete Page!
           <% end %>
         </div>
       <% end %>

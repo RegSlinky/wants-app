@@ -68,3 +68,4 @@ gem 'active_hash'
 gem 'pry-rails'
 gem 'rails-i18n'
 gem "font-awesome-rails"
+gem 'payjp'

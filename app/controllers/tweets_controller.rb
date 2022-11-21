@@ -4,6 +4,8 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.order("created_at DESC")
+    @items = Item.includes(:order)
+    
   end
 
   def new
