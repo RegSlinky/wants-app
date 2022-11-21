@@ -69,3 +69,4 @@ gem 'pry-rails'
 gem 'rails-i18n'
 gem "font-awesome-rails"
 gem 'payjp'
+gem "aws-sdk-s3", require: false
