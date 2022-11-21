@@ -2,41 +2,42 @@
   <div class="tweet__body"> 
     <%= link_to image_tag(tweet.image, class: :tweet__img ), tweet_path(tweet) %>
         <div class="balloonoya">
-        <div class="box_comment", id="comment">
-          <%= link_to "#", class: :form__btn__comment do %>
-            <i class="fa-regular fa-comment"></i>
-            <span class="balloon">
-              <%= tweet.text %>
-            </span>
+          <div class="box_comment", id="comment">
+            <%= link_to "#", class: :form__btn__comment do %>
+              <i class="fa-regular fa-comment"></i>
+                <span class="balloon">
+                  <%= tweet.text %>
+                </span>
             <% end %>
-        </div>
-      </div>
-    <%= link_to "#{tweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
-      <div class="tweettitle">
-        <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
-      </div>  
-
-    <%# <% if item.order != nil %>
-      <%# <div class='sold-out'> %>
-        <%# <span>Sold Out!!</span> %>
-      <%# </div> %>
-    <%# <% end %> 
+          </div>
+        </div>  
+      <%= link_to "#{tweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
+    <div class="tweettitle">
+      <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
+    </div>  
 
     <div class="buy_action">
-
-    <%# <% if @items.order != nil %> 
+    <% if tweet.item != nil %>
+      <% if tweet.item.order != nil %>
+        <div class='sold-out'>
+          <span>Sold Out!!</span>
+        </div>
+      <% end %> 
+    <% end %> 
+    
       <% if tweet.item != nil %>
-        <% if user_signed_in? && current_user.id == tweet.user.id %>
-          <%= link_to tweet_items_path(tweet.id), class: :form__btn__buy do %>
-            <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
-          <% end %>
-        <% elsif %>
-          <%= link_to tweet_items_path(tweet.id), class: :form__btn__edit do %>
-            <i class="fa-solid fa-wrench"></i>&emsp;Edit
+        <% if tweet.item.order == nil %>
+          <% if user_signed_in? && current_user.id == tweet.user.id %>
+            <%= link_to tweet_items_path(tweet.id), class: :form__btn__buy do %>
+              <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
+            <% end %>
+          <% elsif %>
+            <%= link_to tweet_items_path(tweet.id), class: :form__btn__edit do %>
+              <i class="fa-solid fa-wrench"></i>&emsp;Edit
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
-    <%# <% end %> 
+      <% end %> 
     </div>
   </div>
 </div>

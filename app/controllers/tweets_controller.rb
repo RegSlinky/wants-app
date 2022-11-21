@@ -3,9 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index, only: [:show]
 
   def index
-    @tweets = Tweet.order("created_at DESC")
-    @items = Item.includes(:order)
-    
+    @tweets = Tweet.includes(:item).order("created_at DESC")
   end
 
   def new
@@ -42,6 +40,11 @@ class TweetsController < ApplicationController
 
   def move_to_index
     @tweet = Tweet.find(params[:id])
+    if @tweet.item != nil 
+      if @tweet.item.order != nil
+      redirect_to root_path
+      end
+    end
   end
 
 end

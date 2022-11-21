@@ -33,7 +33,7 @@
           <div class="comment_field">
             <p class="rules">⬅︎⬅︎⬅︎ こちらの商品を持っている方は、是非コメントしてみましょう。</br>
             交渉が成立したら、下の”出品"ボタンから商品を出品しましょう。</p></br>
-            
+            <%= render 'devise/shared/error_messages', model: f.object %>
             <%= f.label :comment %><br />
             <%= f.text_area :comment, id:"comment_content", :size=>"80", placeholder:"1回のコメントは、最大100文字以内で入力して下さい" %>
           </div>

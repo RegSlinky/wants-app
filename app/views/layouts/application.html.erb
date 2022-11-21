@@ -21,10 +21,10 @@
           </div>
             <% if user_signed_in? %> 
               <div class="nav__right">
-                <%= link_to "#{current_user.nickname}さん", "#", class: :nav__btn %>
                 <%= link_to destroy_user_session_path, class: :nav__logout, method: :delete do %>
                   <i class="fa-solid fa-user-slash"></i>logout
                 <% end %>
+                <%= link_to "#{current_user.nickname}さん", "#", class: :nav__btn__user %>
               </div>
             <% else %>
               <div class="nav__right">

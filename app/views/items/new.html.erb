@@ -1,18 +1,19 @@
 <div class="items-sell-contents">
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力</h2>
+    
     <%= form_with model: @item, url:tweet_items_path, local: true do |f| %>
 
     <%= render 'devise/shared/error_messages', model: f.object %>
 
     <div class="new-items">
       <div class="weight-bold-text">
-        商品を探している方のニックネーム(投稿者)
-        <span class="indispensable">必須</span>
+          <%= "#{@tweet.user.nickname}さんのWANT LIST" %>
       </div>
-      <%= f.text_area :partner_nickname, class:"items-text", id:"item-name", placeholder:"商品を探している方のニックネーム（必須 40文字まで)", maxlength:"40" %>
     </div>
-
+      <div class="weight-bold-text">
+        アーティスト名：<%= @tweet.artist %>
+      </div>
     <div class="img-upload">
       <div class="weight-bold-text">
         商品画像
@@ -27,11 +28,6 @@
     </div>
 
     <div class="new-items">
-      <div class="weight-bold-text">
-        アーティスト名
-        <span class="indispensable">必須</span>
-      </div>
-      <%= f.text_area :artist, class:"items-text", id:"item-name", placeholder:"アーティスト名（必須 40文字まで)", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
           商品タイトル

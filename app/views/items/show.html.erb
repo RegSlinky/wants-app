@@ -1,7 +1,6 @@
 <div class="item-show">
   <div class="item-box">
-
-    <%# unless @item.order != nil %>
+    <% unless @tweet.item.order != nil %>
       <% if user_signed_in? && current_user.id == @tweet.user.id %>
           <%= link_to item_orders_path(@item), class: :form__btn__buyer do %>
             <i class="fa-solid fa-cart-shopping"></i>&emsp; Buy Page!
@@ -16,6 +15,7 @@
           <% end %>
         </div>
       <% end %>
+    <% end %>
 
     <div class="item-explain-box">
       <span><%= "商品説明" %></span>
@@ -23,18 +23,18 @@
 
     <div class="item-price-box">
       <span class="item-price">
-        Preice&emsp;￥<%= @tweet.item.price %>
+        Price&emsp;￥<%= @tweet.item.price %>
       </span>
     </div>
 
     <div class="item-img-content">
       <%= image_tag @tweet.item.image ,class:"item-box-img" %> 
     </div>
-      <%# 商品が売れている場合は、sold outを表示しましょう %>
+      <%# 商品が売れている場合は、sold outを表示する %>
       <%# <div class="sold-out">
         <span>Sold Out!!</span>
       </div> %>
-      <%# //商品が売れている場合は、sold outを表示しましょう %>
+      <%# //商品が売れている場合は、sold outを表示する %>
 
     <table class="detail-table">
       <tbody>

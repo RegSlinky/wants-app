@@ -52,11 +52,10 @@ a {
 }
 
 .sold-out {
-  position: absolute;
-  top: 40%;
-  width: 100%;
+  position: relative;
+  bottom: 270px;
   text-align: center;
-  background-color: crimson;
+  background:linear-gradient(to top, rgba(255, 255, 255, 0.12) 0%,rgba(234, 9, 9, 0.822) 100%);
   transform: skewY(-10deg);
 }
 

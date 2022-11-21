@@ -39,7 +39,7 @@ class ItemsController < ApplicationController
     if current_user.id == item.user.id
       item.destroy
     end
-    redirect_to root_path
+      redirect_to root_path
   end
 
   private
@@ -52,14 +52,14 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:artist, :image, :title, :shipping_fee_status_id, :prefecture_id, :partner_nickname, :price).merge(user_id:current_user.id, tweet_id: params[:tweet_id])
   end
 
-  def edit_params
-    params.require(:item).permit(:artist, :image, :title, :shipping_fee_status_id, :prefecture_id, :partner_nickname, :price).merge(user_id:current_user.id)
-  end
-
   def contributor_confirmation
      if current_user.id == @tweet.user.id
       redirect_to root_path
     end
+  end
+
+  def edit_params
+    params.require(:item).permit(:artist, :image, :title, :shipping_fee_status_id, :prefecture_id, :partner_nickname, :price).merge(user_id:current_user.id)
   end
 
 end
