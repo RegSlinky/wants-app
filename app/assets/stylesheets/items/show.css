@@ -125,8 +125,9 @@
   width: 200px; 
   transition: all 0.2s;
   position: relative;
-  top: 50px;
+  top: 540px;
   left: 277px;
+  position: fixed;
 }
 
 .form__btn__destroy:hover {
