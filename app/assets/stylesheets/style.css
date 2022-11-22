@@ -468,9 +468,10 @@ transform: translate(5px, 3px);
   text-decoration: none;
   text-align: center;
 }
-.tweet__image{
-  width: 40%;
-  margin: 0 auto;
+.tweet__image__show{
+  width: 400px;
+ 
+  margin: 0px 0px 0px 155px;
   padding: 0px 0px 0px 40px;
 }
 .tweet__detail{

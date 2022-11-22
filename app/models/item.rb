@@ -12,7 +12,7 @@ class Item < ApplicationRecord
   validates :image, presence: true 
 
   with_options presence: true do
-    validates :partner_nickname, length: {maximum: 40}
+    validates :partner_nickname, length: {maximum: 10}
     validates :artist, length: {maximum: 40}
     validates :title, length: {maximum: 140}
   end
