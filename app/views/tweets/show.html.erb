@@ -7,7 +7,7 @@
         <%= @tweet.artist %>
       </p>
       <div class="tweet__image__show">
-        <%= image_tag @tweet.image %>
+        <%= image_tag @tweet.image.variant(resize:'300x300') %>
       </div>
       <div class="tweet__body">
         <div class="tweet__detail">
