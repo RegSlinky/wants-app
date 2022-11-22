@@ -69,10 +69,10 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("アーティスト名は40文字以内で入力してください")
       end
-      it '投稿者のニックネームが40文字以上では投稿できない' do
-        @item.partner_nickname = "a" * 41
+      it '投稿者のニックネームが10文字以上では投稿できない' do
+        @item.partner_nickname = "a" * 11
         @item.valid?
-        expect(@item.errors.full_messages).to include("投稿者のニックネームは40文字以内で入力してください")
+        expect(@item.errors.full_messages).to include("投稿者のニックネームは10文字以内で入力してください")
       end
       it '商品タイトルが140文字以上では投稿できない' do
         @item.title = Faker::Lorem.characters(number:141)

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :item do
-    partner_nickname {Faker::Name.initials(number: 40)}
+    partner_nickname {Faker::Name.initials(number: 10)}
     artist {Faker::Name.initials(number: 40)}
     title {Faker::Lorem.characters(number:140)}
     price {400}
