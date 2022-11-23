@@ -42,7 +42,10 @@ a {
 }
 
 .logo_title {
-  font-size: 60px;
+  font-weight: bold;
+  color:rgb(40, 35, 35);
+  text-shadow: 1px 2px 4px rgb(40, 35, 35);
+  font-size: 55px;
   height: 30px;
   width: 260px;
   display: flex;
@@ -597,8 +600,10 @@ transform: translate(5px, 3px);
 }
 
 .newtweet_title {
+  text-align: center;
   font-size: 40px;
-  font-weight: bold;
+  width: 1400px;
+  border-bottom: 2px solid #211e1e;
 }
 
 .detail__text {
