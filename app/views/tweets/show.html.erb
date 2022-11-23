@@ -54,7 +54,7 @@
       <ul class="comments_lists">
         <% @comments.reverse.each do |comment| %>
           <li class="comments_list">
-            <%= comment.created_at.strftime('%Y/%m/%d %H:%M')  %>
+            <%= l comment.created_at %>
             <%= link_to "#{comment.user.nickname}さん", "#", class: :comment_user %>
               <div class="comment_com">
                 <%= comment.comment %>

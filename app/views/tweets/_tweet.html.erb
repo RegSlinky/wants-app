@@ -1,4 +1,4 @@
-<div class="tweet">
+<div class="tweet_eight">
   <div class="tweet__body"> 
     <%= link_to image_tag(tweet.image, class: :tweet__img ), tweet_path(tweet) %>
         <div class="balloonoya">
@@ -11,16 +11,16 @@
             <% end %>
           </div>
         </div>  
-      <%= link_to "#{tweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
-    <div class="tweettitle">
-      <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist%>
+      <%= link_to "#{tweet.user.nickname}さんの WANT LIST", "#", class: :tweet__user__eight %> 
+    <div class="tweettitle_eight">
+      <%= image_tag "wantlist.jpeg", class: :tweet__logo__eight %> <%= link_to "#{tweet.artist}", tweet_path(tweet), class: :tweet__artist__eight %>
     </div>  
 
     <div class="buy_action">
     <% if tweet.item != nil %>
       <% if tweet.item.order != nil %>
         <div class='sold-out'>
-          <span>Sold Out!!</span>
+          <span>Success ful !!</span>
         </div>
       <% end %> 
     <% end %> 
@@ -28,12 +28,12 @@
       <% if tweet.item != nil %>
         <% if tweet.item.order == nil %>
           <% if user_signed_in? && current_user.id == tweet.user.id %>
-            <%= link_to tweet_items_path(tweet.id), class: :form__btn__buy do %>
-              <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
+            <%= link_to tweet_items_path(tweet.id), class: :form__btn__buyeight do %>
+              <i class="fa-solid fa-cart-shopping"></i>
             <% end %>
           <% elsif %>
-            <%= link_to tweet_items_path(tweet.id), class: :form__btn__edit do %>
-              <i class="fa-solid fa-wrench"></i>&emsp;Edit
+            <%= link_to tweet_items_path(tweet.id), class: :form__btn__editeight do %>
+              <i class="fa-solid fa-wrench"></i>
             <% end %>
           <% end %>
         <% end %>

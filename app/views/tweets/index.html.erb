@@ -1,8 +1,16 @@
 <main class="music_main">
   <%= render "head" %>
-  <div class='item-contents'>
-    <h2 class='title'>WANT LIST</h2>
 
+  <div class='item-contents'>
+    <h2 class='newtweet_title'>NEW TWEET</h2>
+  <div class="second_middle">
+    <div class="tweet__wrapper">
+      <%= render partial: 'fourtweet', collection: @fourtweets %>
+    </div>
+  </div>
+
+  <div class='item-contents-list'>
+    <h2 class='title-wantlist'>WANT LIST</h2>
   <div class="second_middle">
     <div class="tweet__wrapper">
       <%= render partial: 'tweet', collection: @tweets %>

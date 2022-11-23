@@ -30,7 +30,7 @@
   margin-left: 8px;
   padding: 3px;
   border-radius: 2px;
-  color: #909ea2;
+  color: #e42636;
   font-size: 12px;
   font-weight: bold;
 }
@@ -111,6 +111,7 @@
 
 .select-box {
   margin: 2vh 0;
+  background-color:#fff;
 }
 
 .sell-price {
@@ -209,12 +210,12 @@
   border-radius: 10px;
 }
 
-.back-btn-buy {
+.sell-btn {
   display: inline-block;
-  padding: 9px 20px 8px 25px;
+  padding: 8px 20px 8px 25px;
   font-size: 1.5em;
   color: rgb(250, 245, 245);
-  background: #9b9696;
+  background: #f10707;
   border: 1px #edf0f2 solid;
   border-radius: 10px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(160, 10, 132, 0.12);
@@ -222,13 +223,12 @@
   height: 60px;
   width: 200px; 
   transition: all 0.2s;
-  text-align: center;
   position: relative;
-  top: 40px;
-  left: 103px;
+  top: 20px;
+  left: 105px;
 }
-
-.back-btn-buy:hover {
+  
+.sell-btn:hover {
   font-size: 1.6em;
   opacity: 0.5;
   background: black;

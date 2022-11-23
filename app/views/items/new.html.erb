@@ -38,14 +38,13 @@
           商品タイトル
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :title, class:"items-text", id:"item-info", placeholder:"商品名、その他商品の説明（必須 140文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :title, class:"items-text", id:"item-info", placeholder:"商品タイトル、その他商品の説明（必須 140文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
 
     <div class="items-detail">
       <div class="weight-bold-text question-text">
         <span>配送について</span>
-        <a class="question" href="#">?</a>
       </div>
       <div class="form">
         <div class="weight-bold-text">
@@ -64,7 +63,6 @@
     <div class="sell-price">
       <div class="weight-bold-text question-text">
         <span>販売価格<br>(¥300〜9,999,999)</span>
-        <a class="question" href="#">?</a>
       </div>
       <div>
         <div class="price-content">
@@ -98,13 +96,5 @@
   </div>
 
   <footer class="items-sell-footer">
-    <ul class="menu">
-      <li><a href="#">プライバシーポリシー</a></li>
-      <li><a href="#">Wants利用規約</a></li>
-      <li><a href="#">特定商取引に関する表記</a></li>
-    </ul>
-    <p class="inc">
-      ©︎Wants,Inc.
-    </p>
   </footer>
 </div>

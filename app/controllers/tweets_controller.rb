@@ -3,7 +3,8 @@ class TweetsController < ApplicationController
   before_action :move_to_index, only: [:show]
 
   def index
-    @tweets = Tweet.includes(:item).order("created_at DESC")
+    @fourtweets = Tweet.includes(:item).order("created_at DESC").limit(4)
+    @tweets = Tweet.includes(:item)
   end
 
   def new

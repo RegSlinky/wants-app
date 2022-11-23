@@ -201,6 +201,7 @@
   border: 1px solid #dedede;
   font-size: 14px;
   text-align: center;
+  border-radius: 5px;
 }
 
 .detail-value {
@@ -208,6 +209,7 @@
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 14px;
+  border-radius: 5px;
 }
 
 .option {

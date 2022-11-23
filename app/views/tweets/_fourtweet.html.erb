@@ -1,0 +1,44 @@
+<div class="tweet">
+  <div class="tweet__body"> 
+    <%= link_to image_tag(fourtweet.image, class: :tweet__img ), tweet_path(fourtweet) %>
+        <div class="balloonoya">
+          <div class="box_comment", id="comment">
+            <%= link_to "#", class: :form__btn__comment do %>
+              <i class="fa-regular fa-comment"></i>
+                <span class="balloon">
+                  <%= fourtweet.text %>
+                </span>
+            <% end %>
+          </div>
+        </div>  
+      <%= link_to "#{fourtweet.user.nickname}さんのWANT LIST", "#", class: :tweet__user %> 
+    <div class="tweettitle">
+      <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{fourtweet.artist}", tweet_path(fourtweet), class: :tweet__artist%>
+    </div>  
+
+    <div class="buy_action">
+    <% if fourtweet.item != nil %>
+      <% if fourtweet.item.order != nil %>
+        <div class='sold-out'>
+          <span>Successful !!</span>
+        </div>
+      <% end %> 
+    <% end %> 
+    
+      <% if fourtweet.item != nil %>
+        <% if fourtweet.item.order == nil %>
+          <% if user_signed_in? && current_user.id == fourtweet.user.id %>
+            <%= link_to tweet_items_path(fourtweet.id), class: :form__btn__buy do %>
+              <i class="fa-solid fa-cart-shopping"></i>&emsp;Buy
+            <% end %>
+          <% elsif %>
+            <%= link_to tweet_items_path(fourtweet.id), class: :form__btn__edit do %>
+              <i class="fa-solid fa-wrench"></i>&emsp;Edit
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %> 
+    </div>
+  </div>
+</div>
+
