@@ -53,6 +53,7 @@
       <% end %>
       <ul class="comments_lists">
         <% @comments.reverse.each do |comment| %>
+        <% if comment.user.id == @tweet.user.id %>
           <li class="comments_list">
             <%= l comment.created_at %>
             <%= link_to "#{comment.user.nickname}さん", "#", class: :comment_user %>
@@ -60,8 +61,19 @@
                 <%= comment.comment %>
               </div>
           </li>
+        </ul>
+        <% else %>
+        <ul class="comments_lists_other">
+          <li class="comments_list_other">
+            <%= l comment.created_at %>
+            <%= link_to "#{comment.user.nickname}さん", "#", class: :comment_user_other %>
+              <div class="comment_com_other">
+                <%= comment.comment %>
+              </div>
+          </li>
+        </ul>
         <% end %>
-      </ul>
+        <% end %>
     </div>
   </div>
 </main>

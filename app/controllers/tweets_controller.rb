@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
 
   def index
     @fourtweets = Tweet.includes(:item).order("created_at DESC").limit(4)
-    @tweets = Tweet.includes(:item)
+    @tweets = Tweet.includes(:item).order("created_at DESC")
   end
 
   def new
