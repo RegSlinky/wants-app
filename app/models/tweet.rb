@@ -10,4 +10,5 @@ class Tweet < ApplicationRecord
   end
 
   validates :image, presence: true
+  
 end
