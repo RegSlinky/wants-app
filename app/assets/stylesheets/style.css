@@ -559,6 +559,10 @@ transform: translate(5px, 3px);
   padding: 0px 5px 0px 5px;
 }
 
+.hidden{
+  display: none;
+}
+
 /* 詳細ページ */
 .show_inner {
   display: flex;

@@ -15,6 +15,11 @@
     <div class="tweettitle">
       <%= image_tag "wantlist.jpeg", class: :tweet__logo %> <%= link_to "#{fourtweet.artist}", tweet_path(fourtweet), class: :tweet__artist%>
     </div>  
+        <div class="balloonoya">
+          <div class="comment_box hidden", id="comment">
+            <i class="fa-regular fa-comment"></i>
+          </div>
+        </div>  
 
     <div class="buy_action">
     <% if fourtweet.item != nil %>
