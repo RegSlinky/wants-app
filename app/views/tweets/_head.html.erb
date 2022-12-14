@@ -11,9 +11,6 @@
       </div>
       </div>
       <% if user_signed_in? %>
-        <%= link_to "#", class: :form__btn__click do %>
-          <i class="fa-solid fa-hand-point-right"></i>
-        <% end %>
         <%= link_to new_tweet_path, class: :form__btn__tweet do %>
           <i class="fa-solid fa-feather-pointed"></i>&emsp;Tweet
         <% end %>
