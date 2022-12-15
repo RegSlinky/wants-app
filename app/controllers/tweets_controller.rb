@@ -33,8 +33,9 @@ class TweetsController < ApplicationController
       redirect_to root_path
   end
 
-    def search
-    @tweets = Tweet.search(params[:keyword])
+  def search
+    @fourtweets = Tweet.search(params[:keyword]).order("created_at DESC").limit(4)
+    @tweets = Tweet.search(params[:keyword]).order("created_at DESC")
   end
 
   private
